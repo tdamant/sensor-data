@@ -1,0 +1,16 @@
+.reading {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+}
+
+.readings {
+  text-align: center;
+  display: grid;
+  row-gap: 10px;
+  font-size: 12px;
+}
+
+.headers {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}

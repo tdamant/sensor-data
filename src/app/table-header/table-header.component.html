@@ -1,0 +1,31 @@
+<div class="readings">
+  <div class='reading headers'>
+    <div style="grid-column: 1/1">Name</div>
+    <div style="grid-column: 2/2">Id</div>
+    <div style="grid-column: 3/3">
+      <div>Sensor type</div>
+      <div (click)="orderByColumn('sensor_type', 'ASC')">
+        <span  class="iconify" data-icon="ant-design:arrow-up-outlined" data-inline="false"></span>
+      </div>
+      <div (click)="orderByColumn('sensor_type', 'DESC')">
+        <span class="iconify" data-icon="ant-design:arrow-down-outlined" data-inline="false"></span>
+      </div>
+    </div>
+    <div style="grid-column: 4/4">Unit</div>
+    <div style="grid-column: 5/5">Box Id</div>
+    <div style="grid-column: 6/6">Latitude</div>
+    <div style="grid-column: 7/7">Longitude</div>
+    <div style="grid-column: 8/8">Lower range</div>
+    <div style="grid-column: 9/9">Upper range</div>
+    <div style="grid-column: 10/10">Reading</div>
+    <div>
+      <div style="grid-column: 11/11">Timestamp</div>
+      <div (click)="orderByColumn('reading_ts', 'ASC')">
+        <span  class="iconify" data-icon="ant-design:arrow-up-outlined" data-inline="false"></span>
+      </div>
+      <div (click)="orderByColumn('reading_ts', 'DESC')">
+        <span class="iconify" data-icon="ant-design:arrow-down-outlined" data-inline="false"></span>
+      </div>
+    </div>
+  </div>
+</div>

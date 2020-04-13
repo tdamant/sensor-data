@@ -1,0 +1,11 @@
+.readings {
+  text-align: center;
+  display: grid;
+  row-gap: 10px;
+  font-size: 12px;
+}
+
+.reading {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+}
