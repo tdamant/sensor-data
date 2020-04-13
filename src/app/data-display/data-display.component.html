@@ -1,2 +1,4 @@
 <app-table-header (orderBy)="onOrderBy($event)"></app-table-header>
 <app-data-table [readings]="chunkToShow"></app-data-table>
+<app-page-select [selectedPage]="selectedPage" [totalPages]="chunkedReadings.length"
+                 (pageSelected)="onPageSelected($event)"></app-page-select>
