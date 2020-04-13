@@ -1,0 +1,5 @@
+<div class="filter">
+  <input #filterInput type="text" placeholder="Filter by sensor type">
+  <button (click)="filter(filterInput.value)" type="submit" value="Filter">Filter</button>
+  <button (click)="filter('')" type="submit" value="Filter">Clear Filter</button>
+</div>

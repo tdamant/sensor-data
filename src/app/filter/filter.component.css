@@ -1,0 +1,19 @@
+.filter {
+  width: 50%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  margin: 24px;
+  font-size: 14px;
+}
+
+input {
+  margin: 0 8px;
+  height: 20px;
+  border: 1px solid #b8bebf;
+  border-radius: 4px;
+}
+
+button {
+  height: 20px;
+}

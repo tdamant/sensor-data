@@ -14,3 +14,7 @@
   font-weight: bold;
   border-bottom: 1px solid black;
 }
+
+.orderBy {
+  cursor: pointer;
+}

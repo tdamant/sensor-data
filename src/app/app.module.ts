@@ -6,6 +6,7 @@ import { DataDisplayComponent } from './data-display/data-display.component';
 import { TableHeaderComponent } from './table-header/table-header.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { PageSelectComponent } from './page-select/page-select.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PageSelectComponent } from './page-select/page-select.component';
     DataDisplayComponent,
     TableHeaderComponent,
     DataTableComponent,
-    PageSelectComponent
+    PageSelectComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule

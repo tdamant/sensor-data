@@ -1,9 +1,10 @@
 .pageSelect {
   cursor: pointer;
-  margin: 4px;
+  margin: 16px;
 }
 
 .pageSelectors {
+  font-size: 14px;
   justify-content: center;
   display: flex;
   flex-direction: row;
