@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import data from '../data/sensor_readings.json'
+import * as data from '../data/sensor_readings.json';
 
 const CHUNKSIZE = 20;
 
