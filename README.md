@@ -11,5 +11,5 @@ As mentioned the stylings are simple - in particular transitions would improve t
 Adding tests for some of the functions which manipulate data would also improve the app.
 
 ## Running
-``npm i``
-``ng serve``  
+## ``npm i``
+## ``ng serve``  
