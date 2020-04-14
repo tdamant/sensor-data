@@ -6,6 +6,7 @@
 .pageSelectors {
   font-size: 14px;
   justify-content: center;
+  float: right;
   display: flex;
   flex-direction: row;
 }

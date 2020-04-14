@@ -5,8 +5,8 @@
     <div style="grid-column: 3/3">{{reading.sensor_type}}</div>
     <div style="grid-column: 4/4">{{reading.unit}}</div>
     <div style="grid-column: 5/5">{{reading.box_id}}</div>
-    <div style="grid-column: 6/6">{{reading.latitude}}</div>
-    <div style="grid-column: 7/7">{{reading.longitude}}</div>
+    <div (click)="setPosition(reading)" style="grid-column: 6/6; cursor: pointer">{{reading.latitude}}</div>
+    <div (click)="setPosition(reading)" style="grid-column: 7/7; cursor: pointer">{{reading.longitude}}</div>
     <div style="grid-column: 8/8">{{reading.range_l}}</div>
     <div style="grid-column: 9/9">{{reading.range_u}}</div>
     <div style="grid-column: 10/10">{{reading.reading}}</div>

@@ -28,7 +28,6 @@ export class PageSelectComponent implements OnInit {
   @Output() pageSelected = new EventEmitter<number>();
 
   ngOnInit(): void {
-    console.log(this.currentPage);
     this.selectPageOptions = this.getSelectPageOptions(this.currentPage);
   }
 

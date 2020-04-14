@@ -28,7 +28,9 @@ export class DataDisplayComponent implements OnInit {
   allReadings: SensorData[];
   chunkedReadings: SensorData[][];
   chunkToShow: SensorData[];
+  filteredReadings: SensorData[];
   selectedPage: number;
+  mapPositionToShow: Position | undefined;
   constructor() { }
 
   ngOnInit(): void {
@@ -50,24 +52,30 @@ export class DataDisplayComponent implements OnInit {
   onPageSelected(page: number) {
     this.selectedPage = page;
     this.chunkToShow = this.chunkedReadings[page - 1];
+    this.mapPositionToShow = undefined;
   }
 
   onOrderBy({column, direction}: {column: 'sensor_type' | 'reading_ts', direction: 'ASC' | 'DESC'}) {
-    this.allReadings = this.sortAllReadings(column, direction);
-    this.updateData(this.allReadings);
+    this.filteredReadings = this.sortAllReadings(column, direction);
+    this.updateData(this.filteredReadings);
   }
 
   onFilterBy(filterValue: string) {
     const filteredData = this.allReadings.filter(reading => reading.sensor_type.indexOf(filterValue) > -1);
+    this.filteredReadings = filteredData;
     this.updateData(filteredData);
+  }
+  onPositionClicked(position: Position) {
+    this.mapPositionToShow = position;
   }
   private updateData(newAllData: SensorData[]) {
     this.chunkedReadings = this.chunkData(newAllData);
     this.selectedPage = 1;
     this.chunkToShow = this.chunkedReadings[this.selectedPage - 1];
+    this.mapPositionToShow = undefined;
   }
   private sortAllReadings(column: SortableColumns, direction: Direction) {
-    return this.allReadings.sort((a, b) => {
+    return this.filteredReadings.sort((a, b) => {
       if (column === 'sensor_type') {
         return direction === 'ASC' ? a[column].localeCompare(b[column]) : b[column].localeCompare(a[column]);
       } else {
